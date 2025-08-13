@@ -1,0 +1,35 @@
+
+.container {
+    margin-top: 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container h2 {
+    margin-top: 2rem;
+    color: var(--light);
+}
+.container p {
+    max-width: 600px;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--text);
+}
+body.dark-mode .container p {
+    color: var(--text-dark);
+}
+.container a {
+    padding: 0.7rem 2rem;
+    background: var(--light);
+    color: var(--dark);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.container a:hover {
+    background: var(--verylight);
+}

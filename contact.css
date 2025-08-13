@@ -1,0 +1,53 @@
+/* Contact page specific styles */
+.contact-container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-container h2 {
+    margin-top: 2rem;
+    color: var(--light);
+}
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.2rem;
+    color: var(--dark);
+    background: var(--verylight);
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.contact-link i {
+    font-size: 1.3rem;
+}
+.contact-link:hover {
+    background: var(--light);
+    color: var(--back);
+}
+body.dark-mode .contact-link {
+    color: var(--text-dark);
+    background: var(--dark);
+}
+body.dark-mode .contact-link:hover {
+    background: var(--light);
+    color: var(--dark);
+}
+body.dark-mode .contact-container i {
+    color: var(--text-dark);
+}
+body.dark-mode .contact-container h2 {
+    color: var(--text-dark);
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-list</title>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo" text="To-Do-List">To-Do-List</h1>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="toggleframe">
+            <button class="toggle">
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="tasks">
+            <div class ="box" group="1">
+                <h2>Today</h2>
+                <button class="editgroup" group="1">
+                    <i class='far fa-edit'></i>
+                </button>
+                <botton class="edit" group="1">
+                    <i class='far fa-trash-alt'></i>
+                </botton>
+                <button class="edit" group="1">
+                    <i class='fas fa-plus'></i>
+                </button>
+                <div class="circle circle-1">
+                    <div class="percent ptext-1">0%</div>
+                </div>
+                <ul>
+                    <li group="1" task="1"> 
+                       <div class="checkbox-wrapper-11">
+                            <input id="task-1-1" type="checkbox" class="task" group="1" task="1">
+                            <label for="task-1-1">Check email
+                            </label>
+                                <button class="edit" id ="edit-1-1" group="1" task="1"><i class="far fa-edit"></i></button>
+                                <button class="edit" id ="delete-1-1" group="1" task="1"><i class="far fa-trash-alt"></i></button>
+                                <input type="text" class="edit-input" id="edit-input-1-1" placeholder="Edit task" group="1" task="1">
+                        </div></li>
+                    <li group="1" task="2">      
+                        <div class="checkbox-wrapper-11">
+                            <input id="task-1-2" type="checkbox" class="task" group="1" task="2">
+                            <label for="task-1-2">Finish homework</label>
+                            <button class="edit" id="edit-1-2" group="1" task="2"><i class="far fa-edit"></i></button>
+                            <button class="edit" id="delete-1-2" group="1" task="2"><i class="far fa-trash-alt"></i></button>
+                            <input type="text" class="edit-input" id="edit-input-1-2" placeholder="Edit task" group="1" task="2">
+                        </div></li>
+                    <li group="1" task="3">
+                        <div class="checkbox-wrapper-11">
+                            <input id="task-1-3" type="checkbox" class="task" group="1" task="3">
+                            <label for="task-1-3">Call mom</label>
+                            <button class="edit" id="edit-1-3" group="1" task="3"><i class="far fa-edit"></i></button>
+                            <button class="edit" id="delete-1-3" group="1" task="3"><i class="far fa-trash-alt"></i></button>
+                            <input type="text" class="edit-input" id="edit-input-1-3" placeholder="Edit task" group="1" task="3">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="text" class="edit-input" placeholder="add task" group="1" add="true" style="width: 100%;">   
+                    </li>
+                </ul>
+            </div>
+            <div class ="box" group="2">
+                <h2>Tomorrow</h2>
+                <button class="editgroup" group="2">
+                    <i class='far fa-edit'></i>
+                </button>
+                <botton class="edit" group="2">
+                    <i class='far fa-trash-alt'></i>
+                </botton>
+                <button class="edit" group="2">
+                    <i class='fas fa-plus'></i>
+                </button>
+                <div class="circle circle-2">
+                    <div class="percent ptext-2">0%</div>
+                </div>
+                <ul>
+                    <li group="2" task="1"> 
+                        <div class="checkbox-wrapper-11">
+                            <input id="task-2-1" type="checkbox" class="task" group="2" task="1">
+                            <label for="task-2-1">Buy groceries</label>
+                            <button class="edit" id="edit-2-1" group="2" task="1"><i class="far fa-edit"></i></button>
+                            <button class="edit" id="delete-2-1" group="2" task="1"><i class="far fa-trash-alt"></i></button>
+                            <input type="text" class="edit-input" id="edit-input-2-1" placeholder="Edit task" group="2" task="1">
+                        </div>
+                    </li>
+                    <li group="2" task="2">      
+                        <div class="checkbox-wrapper-11">
+                            <input id="task-2-2" type="checkbox" class="task" group="2" task="2">
+                            <label for="task-2-2">Go for a run</label>
+                            <button class="edit" id="edit-2-2" group="2" task="2"><i class="far fa-edit"></i></button>
+                            <button class="edit" id="delete-2-2" group="2" task="2"><i class="far fa-trash-alt"></i></button>
+                            <input type="text" class="edit-input" id="edit-input-2-2" placeholder="Edit task" group="2" task="2">
+                        </div>
+                    </li>
+                    <li group="2" task="3">
+                        <div class="checkbox-wrapper-11">
+                            <input id="task-2-3" type="checkbox" class="task" group="2" task="3">
+                            <label for="task-2-3">Water plants</label>
+                                <button class="edit" id="edit-2-3" group="2" task="3"><i class="far fa-edit"></i></button>
+                                <button class="edit" id="delete-2-3" group="2" task="3"><i class="far fa-trash-alt"></i></button>   
+                                <input type="text" class="edit-input" id="edit-input-2-3" placeholder="Edit task" group="2" task="3">                          
+                        </div>
+                    </li>
+                    <li>
+                        <input type="text" class="edit-input" placeholder="add task" group="2" add="true" style="width: 100%;">   
+                    </li>
+                </ul>
+            </div>
+            <div class ="box" group="3">
+                <h2>Later</h2>
+                <button class="editgroup" group="3">
+                    <i class='far fa-edit'></i>
+                </button>
+                <botton class="edit" group="3">
+                    <i class='far fa-trash-alt'></i>
+                </botton>
+                <button class="edit" group="3">
+                    <i class='fas fa-plus'></i>
+                </button>
+
+                <div class="circle circle-3">
+                    <div class="percent ptext-3">0%</div>
+                </div>
+                <ul>
+                    <li group="3" task="1"> 
+                       <div class="checkbox-wrapper-11">
+                            <input id="task-3-1" type="checkbox" class="task" group="3" task="1">
+                            <label for="task-3-1">Plan vacation</label>
+                                <button class="edit" id="edit-3-1" group="3" task="1"><i class="far fa-edit"></i></button>
+                                <button class="edit" id="delete-3-1" group="3" task="1"><i class="far fa-trash-alt"></i></button>
+                                <input type="text" class="edit-input" id="edit-input-3-1" placeholder="Edit task" group="3" task="1">
+                        </div></li>
+                    <li group="3" task="2">      
+                        <div class="checkbox-wrapper-11">
+                            <input id="task-3-2" type="checkbox" class="task" group="3" task="2">
+                            <label for="task-3-2">Read a book</label>
+                                <button class="edit" id="edit-3-2" group="3" task="2"><i class="far fa-edit"></i></button>
+                                <button class="edit" id="delete-3-2" group="3" task="2"><i class="far fa-trash-alt"></i></button>
+                                <input type="text" class="edit-input" id="edit-input-3-2" placeholder="Edit task" group="3" task="2">
+                        </div></li>
+                    <li group="3" task="3">
+                        <div class="checkbox-wrapper-11">
+                            <input id="task-3-3" type="checkbox" class="task" group="3" task="3">
+                            <label for="task-3-3">Organize closet</label>
+                                <button class="edit" id="edit-3-3" group="3" task="3"><i class="far fa-edit"></i></button>
+                                <button class="edit" id="delete-3-3" group="3" task="3"><i class="far fa-trash-alt"></i></button>
+                                <input type="text" class="edit-input" id="edit-input-3-3" placeholder="Edit task" group="3" task="3">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="text" class="edit-input" placeholder="add task" group="3" add="true" style="width: 100%;">   
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="addingtask">
+            <div class="input">
+                <p>Enter your task here</p>
+                <div class="frame">
+                <div class="arrow"></div>
+                </div>
+                <button class="add" aria-label="Add task">+</button>
+            </div>
+               <div class="addframe"></div>
+        </div>    
+    </div>
+
+<script src="website.js"></script>    
+</body>
+</html>
