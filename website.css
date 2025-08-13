@@ -688,6 +688,19 @@ body.dark-mode .addframe button:hover {
     height: 40px;
     margin-left: 0;
   }
+  .addframe button {
+  position: relative;
+  right: 10px;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+  .addframe input {
+    width: 50%;
+    height: 20px;
+    font-size: 0.8rem;
+  }
 }
 
 
