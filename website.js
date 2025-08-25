@@ -96,10 +96,22 @@ arrow.animate([
     duration: 1500,
     iterations: Infinity
   });
-  // Toggle dark mode
+  // Initialize theme from sessionStorage
+const savedTheme = sessionStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  index = 1;
+  if (button) button.style.transform = 'translateX(30px)';
+} else {
+  index = 0;
+  if (button) button.style.transform = 'translateX(0px)';
+}
+
+  // Toggle dark mode and persist
 button.addEventListener('click',function(){
     body.classList.toggle('dark-mode');
     index = body.classList.contains('dark-mode') ? 1 : 0;
+    sessionStorage.setItem('theme', index ? 'dark' : 'light');
     button.style.transform = index ? 'translateX(30px)' : 'translateX(0px)';
 });
 //end of animations
