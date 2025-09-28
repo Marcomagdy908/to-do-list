@@ -1,0 +1,209 @@
+.settings-container {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 80%;
+  margin-bottom: 100px;
+}
+.settings-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  justify-self: start;
+}
+.settings-container h6 {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: rgb(79, 79, 79);
+  font-weight: 400;
+}
+.settings-container h5 {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: rgb(79, 79, 79);
+  font-weight: 500;
+}
+.appearance,
+.notifications,
+.data-privacy {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.appearance h2,
+.notifications h2,
+.data-privacy h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.modes {
+  display: flex;
+  gap: 20px;
+  justify-self: center;
+  margin: 20px px;
+  border-radius: 10px;
+}
+.modes button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.active-mode {
+  border: 2px solid #376fc8 !important;
+}
+.notification-type {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.data-export {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.data-export button {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid rgb(232, 232, 232);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.data-export button:hover {
+  background-color: #376fc8;
+  color: white;
+  border: 1px solid #376fc8;
+}
+.save-button {
+  background-color: #376fc8;
+  color: white;
+  border: 1px solid #376fc8;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+}
+.save-button:hover {
+  background-color: #254a8f;
+}
+
+.checkbox-input {
+  appearance: none;
+  background-color: #dfe1e4;
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 19px;
+  margin: 0;
+  position: relative;
+  width: 40px;
+  transition: all 0.3s ease;
+  scale: 1.5;
+}
+
+.checkbox-input::before {
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+
+.checkbox-input::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 2px;
+  position: absolute;
+  top: 2.7px;
+  width: 14px;
+  transition: all 0.3s ease-out;
+  scale: 1.15;
+}
+
+.checkbox input[type="checkbox"] {
+  cursor: default;
+}
+
+.checkbox-input:hover {
+  background-color: #c9cbcd;
+  transition-duration: 0s;
+}
+body.dark .checkbox-input:hover {
+  background-color: #262a33;
+}
+.checkbox-input:checked {
+  background-color: #376fc8;
+}
+body.dark .checkbox-input:checked {
+  background-color: #254a8f;
+}
+body.dark .checkbox-input:checked:hover {
+  background-color: #1f3e78;
+}
+
+.checkbox-input:checked::after {
+  background-color: #fff;
+  left: 23px;
+}
+
+.checkbox :focus:not(.focus-visible) {
+  outline: 0;
+}
+
+.checkbox-input:checked:hover {
+  background-color: #254a8f;
+}
+.light-mode-img img {
+  border-radius: 10px;
+}
+body.dark .settings-container {
+  background-color: #161b22 !important;
+}
+body.dark .settings-container h1 {
+  color: white !important;
+}
+body.dark .settings-container h6,
+body.dark .settings-container h5 {
+  color: rgb(182, 182, 182) !important;
+}
+body.dark .modes button {
+  color: white !important;
+}
+body.dark .appearance,
+body.dark .notifications,
+body.dark .data-privacy,
+body.dark .modes {
+  box-shadow: 0px 0px 3px 1px rgba(194, 194, 194, 0.1);
+}
+body.dark .data-export button {
+  background-color: #2d3748;
+  color: white;
+  border: 1px solid #303541;
+}
+body.dark .data-export button:hover {
+  background-color: #272b35;
+}
+body.dark .save-button {
+  background-color: #2d3748;
+  color: white;
+  border: 1px solid #303541;
+}
+body.dark .save-button:hover {
+  background-color: #272b35;
+}
+body.dark .active-mode {
+  border: 2px solid #2d3748 !important;
+}
+
+

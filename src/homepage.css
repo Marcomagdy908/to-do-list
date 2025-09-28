@@ -1,0 +1,45 @@
+.main-container {
+  background-color: #f3f6fc !important;
+  padding-bottom: 20px;
+}
+.home-page-text h1 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.home-page-text p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+.start-btn {
+  margin-left: 50px;
+  margin-top: 20px;
+  background-color: #376fc8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.start-btn:hover {
+  background-color: #254a8f;
+  color: white;
+  cursor: pointer;
+}
+.home-page-img {
+  height: auto;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+body.dark .home-page-text h1 {
+  color: white !important;
+}
+body.dark .home-page-text p {
+  color: white !important;
+}
+body.dark .main-container {
+  background-color: #161b22 !important;
+}
+

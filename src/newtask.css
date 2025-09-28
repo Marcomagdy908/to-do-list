@@ -1,0 +1,97 @@
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+  color: white;
+}
+.btn-primary {
+  background-color: #376fc8;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.btn-primary:hover {
+  background-color: #254a8f;
+  color: white;
+  cursor: pointer;
+}
+form {
+  margin-top: 20px;
+  width: 60%;
+  justify-self: center;
+}
+.label {
+  border-bottom: 1px solid #ccc;
+  width: 60%;
+  justify-self: center;
+  padding-bottom: 10px;
+}
+.container {
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 40px;
+  width: 60%;
+  justify-self: center;
+}
+body.dark .container {
+  background-color: #161b22 !important;
+}
+body.dark input{
+  background-color: #323743;
+  color: white;
+  border: none;
+}
+body.dark input:focus{
+  background-color: #323743;
+  color: white;
+  border: none;
+}
+body.dark input::placeholder{
+  color: rgb(177, 177, 177);
+}
+body.dark textarea{
+  background-color: #323743;
+  color: white;
+  border: none;
+}
+body.dark textarea:focus{
+  background-color: #323743;
+  color: white;
+  border: none;
+}
+body.dark textarea::placeholder{
+  color: rgb(177, 177, 177);
+}
+body.dark select{
+  background-color: #323743;
+  color: white;
+  border: none;
+}
+body.dark select:focus{
+  background-color: #323743;
+  color: white;
+  border: none;
+}
+body.dark select::placeholder{
+  color: rgb(177, 177, 177);
+}
+
+body.dark .label{
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}

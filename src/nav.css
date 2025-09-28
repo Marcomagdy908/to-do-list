@@ -1,0 +1,58 @@
+.bg-light{
+  background-color: #ffffff !important;
+  box-shadow: 0 0 3px px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.active {
+  font-weight: bold;
+  color: #376fc8 !important;
+}
+.btn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+}
+.btn:hover {
+  color: #376fc8;
+  cursor: pointer;
+}
+.add-btn {
+  background-color: #376fc8;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.add-btn:hover {
+  background-color: #254a8f;
+  color: white;
+  cursor: pointer;
+}
+body.dark .bg-light{
+  background-color: #0c0e10 !important;
+  color: white !important;
+}
+body.dark .active {
+  font-weight: bold;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+body.dark .nav-item{
+  color: white !important;
+  transition: all 0.3s ease;
+}
+body.dark .nav-link{
+  color: white !important;
+  transition: all 0.3s ease;
+}
+body.dark .btn{
+  color: white !important;
+  background-color: #2d3748;
+  transition: all 0.3s ease;
+}
+body.dark .btn:hover{
+  background-color: #262d39;
+  transition: all 0.3s ease;
+}
+
