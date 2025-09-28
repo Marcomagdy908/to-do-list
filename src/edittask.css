@@ -83,19 +83,19 @@ body.dark .edit-button:hover{
   
 }
 @media screen and (max-width: 768px) {
-  .showtask {
+  .showtask-container{
     width: 80%;
     justify-self: center;
   }
 }
 @media screen and (max-width: 480px) {
-  .showtask {
+  .showtask-container{
     width: 90%;
     justify-self: center;
   }
 }
 @media screen and (max-width: 950px) {
-  .showtask {
+  .showtask-container{
     width: 80%;
     justify-self: center;
   }
