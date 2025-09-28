@@ -42,4 +42,28 @@ body.dark .home-page-text p {
 body.dark .main-container {
   background-color: #161b22 !important;
 }
+@media screen and (max-width: 768px) {
+  .home-page-text {
+    padding-left: 2px;
+    justify-content: start;
+}
+.home-page-text h1 {
+  margin-left: 20px;
+}
+.home-page-text p {
+  margin-left: 20px
+}
+
+}
+@media screen and (max-width: 480px) {
+  .home-page-text{
+    justify-content: start;
+}
+.home-page-text h1 {
+  margin-left: 20px;
+}
+.home-page-text p {
+  margin-left: 20px
+}
+}
 
