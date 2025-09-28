@@ -47,6 +47,17 @@ function Nav({ theme }) {
             </li>
             <li className="nav-item">
               <NavLink
+                to="/tasks"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                aria-current="page"
+              >
+                Tasks
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
                 to="/settings"
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"

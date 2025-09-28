@@ -6,6 +6,7 @@ import Footer from "./footer.jsx";
 import Settings from "./settings.jsx";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import Hometasks from "./hometasks.jsx";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/newtask" element={<Newtask />} />
         <Route path="/edittask/:id" element={<Edittask />} />
+        <Route path="/tasks" element={<Hometasks />} />
         <Route
           path="/settings"
           element={<Settings theme={theme} setTheme={setTheme} />}
