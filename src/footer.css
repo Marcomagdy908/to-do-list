@@ -67,3 +67,15 @@ body.dark .footer-logo ul li a:hover{
 body.dark .fa-github:hover{
   color: rgb(12, 11, 74) !important;
 }
+@media screen and (max-width: 768px) {
+  .footer{
+    width: 95%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer{
+    width: 95%;
+  }
+
+  
+}
