@@ -1,4 +1,6 @@
 import "./settings.css";
+import homelight from "./assets/homelight.png";
+import homedark from "./assets/homedark.png";
 import { useState } from "react";
 
 function Settings({ theme, setTheme }) {
@@ -54,7 +56,7 @@ function Settings({ theme, setTheme }) {
               <img
                 className="img-fluid"
                 style={{ width: "400px" }}
-                src="src\assets\homelight.png"
+                src={homelight}
                 alt="light mode"
               ></img>
             </div>
@@ -68,7 +70,7 @@ function Settings({ theme, setTheme }) {
               <img
                 className="img-fluid"
                 style={{ width: "400px" }}
-                src="src\assets\homedark.png"
+                src={homedark}
                 alt="light mode"
               ></img>
             </div>
