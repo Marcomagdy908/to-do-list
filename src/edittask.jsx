@@ -68,7 +68,7 @@ function Edittask() {
   return (
     <>
       {!isEditing ? (
-        <div className="showtask-container">
+        <div className="showtask-container w-100">
           <div className="showtask">
             <div className="task-header d-flex justify-content-between align-items-center mb-3">
               <h1>{title}</h1>
