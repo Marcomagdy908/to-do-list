@@ -55,4 +55,8 @@ body.dark .btn:hover{
   background-color: #262d39;
   transition: all 0.3s ease;
 }
+body.dark .navbar-toggler-icon{
+  color: white !important;
+  transition: all 0.3s ease;
+}
 
