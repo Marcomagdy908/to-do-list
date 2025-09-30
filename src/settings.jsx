@@ -1,7 +1,7 @@
 import "./settings.css";
 import homelight from "./assets/homelight.png";
 import homedark from "./assets/homedark.png";
-import { useState ,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -30,17 +30,40 @@ function Settings({ theme, setTheme }) {
     alert("Settings saved successfully!");
   };
 
+  const convertToCSV = (data) => {
+    const todos = JSON.parse(data);
+    if (!todos || todos.length === 0) {
+      return "";
+    }
+    const headers = Object.keys(todos[0]);
+    const csvRows = [];
+    csvRows.push(headers.join(","));
+
+    for (const row of todos) {
+      const values = headers.map((header) => {
+        const escaped = ("" + row[header]).replace(/"/g, '""'); 
+        return `"${escaped}"`;
+      });
+      csvRows.push(values.join(","));
+    }
+    return csvRows.join("\n");
+  };
+
   const handleExportData = () => {
     const todos = localStorage.getItem("todos");
     if (!todos) {
       alert("No to-do data to export.");
       return;
     }
-    const blob = new Blob([todos], { type: "application/json" });
+
+    const data = convertToCSV(todos);
+    const fileType = "text/csv";
+    const fileName = "todos.csv";
+    const blob = new Blob([data], { type: fileType });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "todos.json";
+    a.download = fileName;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -132,15 +155,20 @@ function Settings({ theme, setTheme }) {
       <div className="data-privacy" data-aos="fade-right" data-aos-delay="300">
         <h2>Data & Privacy</h2>
         <h5>Review and manage your data and privacy settings</h5>
-        <div className="data-export pt-3">
+        <div className="data-export pt-3 d-flex justify-content-between align-items-center">
           <span>
             <label>Export Data</label>
             <h6>Download a copy of your data for backup or transfer</h6>
           </span>
-          <button onClick={handleExportData}>Export Data</button>
+          <button onClick={handleExportData}>Export Data as CSV</button>
         </div>
       </div>
-      <button className="save-button mt-5" onClick={handleSaveChanges} data-aos="fade-up" data-aos-delay="400">
+      <button
+        className="save-button mt-5"
+        onClick={handleSaveChanges}
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         Save Changes
       </button>
     </div>
