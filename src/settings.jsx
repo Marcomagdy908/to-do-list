@@ -1,9 +1,15 @@
 import "./settings.css";
 import homelight from "./assets/homelight.png";
 import homedark from "./assets/homedark.png";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Settings({ theme, setTheme }) {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const [notifications, setNotifications] = useState(() => {
     const savedNotifications = localStorage.getItem("notifications");
     return savedNotifications
@@ -42,9 +48,9 @@ function Settings({ theme, setTheme }) {
   };
 
   return (
-    <div className="settings-container">
+    <div className="settings-container" data-aos="fade-up">
       <h1>Settings</h1>
-      <div className="appearance">
+      <div className="appearance" data-aos="fade-right" data-aos-delay="100">
         <h2>Appearance</h2>
         <h5>Customize the look and feel of the application</h5>
         <div className="modes">
@@ -78,7 +84,7 @@ function Settings({ theme, setTheme }) {
           </button>
         </div>
       </div>
-      <div className="notifications">
+      <div className="notifications" data-aos="fade-left" data-aos-delay="200">
         <h2>Notifications</h2>
         <h5>Manage your notification preferences</h5>
         <div className="notification-options">
@@ -123,7 +129,7 @@ function Settings({ theme, setTheme }) {
           </div>
         </div>
       </div>
-      <div className="data-privacy">
+      <div className="data-privacy" data-aos="fade-right" data-aos-delay="300">
         <h2>Data & Privacy</h2>
         <h5>Review and manage your data and privacy settings</h5>
         <div className="data-export pt-3">
@@ -134,7 +140,7 @@ function Settings({ theme, setTheme }) {
           <button onClick={handleExportData}>Export Data</button>
         </div>
       </div>
-      <button className="save-button mt-5" onClick={handleSaveChanges}>
+      <button className="save-button mt-5" onClick={handleSaveChanges} data-aos="fade-up" data-aos-delay="400">
         Save Changes
       </button>
     </div>

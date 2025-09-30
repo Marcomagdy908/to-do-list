@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import "./hometasks.css";
 import { initialTodos } from "./intial";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 function formatDate(dateString) {
   const [year, month, day] = dateString.split("-").map(Number);
@@ -15,7 +18,7 @@ function formatDate(dateString) {
 function Card({ todo, onToggleDone }) {
   const { id, title, date, category, priority, completed } = todo;
   return (
-    <div className="card">
+    <div className="card" data-aos="fade-right">
       <div className="card-body">
         <div className="d-flex justify-content-between">
           <Link
@@ -55,6 +58,10 @@ function Card({ todo, onToggleDone }) {
 }
 
 function Hometasks() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem("todos");
     return savedTodos ? JSON.parse(savedTodos) : initialTodos;
@@ -100,7 +107,7 @@ function Hometasks() {
     <>
       <div className="container-fluid body-container">
         <h1>Your Tasks Overview</h1>
-        <div className="row mt-4 mb-5">
+        <div className="row mt-4 mb-5" data-aos="fade-up">
           <Task_container title="Today" tasks={todayTasks} />
           <Task_container title="Upcoming" tasks={upcomingTasks} />
           <Task_container title="Completed" tasks={completedTasks} />

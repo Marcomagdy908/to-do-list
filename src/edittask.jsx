@@ -1,12 +1,18 @@
 import "./edittask.css";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import aos from "aos";
+import "aos/dist/aos.css";
 function Edittask() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [isEditing, setIsEditing] = useState(false);
   const [task, setTask] = useState(getTask(id));
   const [editedtask, setEditedtask] = useState({ ...task });
+
+  useEffect(() => {
+    aos.init({ duration: 2000 });
+  }, []);
 
   useEffect(() => {
     setEditedtask({ ...task });
@@ -56,23 +62,26 @@ function Edittask() {
     return <div>Task not found</div>;
   }
 
-  const {
-    title,
-    description,
-    date,
-    priority,
-    category,
-    completed,
-  } = task;
+  const { title, description, date, priority, category, completed } = task;
 
   return (
     <>
       {!isEditing ? (
-        <div className="showtask-container w-100">
+        <div
+          className="showtask-container w-100"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className="showtask">
             <div className="task-header d-flex justify-content-between align-items-center mb-3">
-              <h1>{title}</h1>
-              <span className="task-status">
+              <h1 data-aos="fade-right" data-aos-delay="200">
+                {title}
+              </h1>
+              <span
+                className="task-status"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
                 {completed ? "Done" : "in progress"}
               </span>
             </div>
@@ -80,55 +89,87 @@ function Edittask() {
               className="d-flex justify-content-between align-items-center mb-3"
               style={{ width: "60%" }}
             >
-              <span className="task-date">
+              <span
+                className="task-date"
+                data-aos="fade-right"
+                data-aos-delay="300"
+              >
                 <h5>Due Date:</h5>
                 <h6>{date}</h6>
               </span>
-              <span className="task-priority d-flex gap-2">
+              <span
+                className="task-priority d-flex gap-2"
+                data-aos="fade-left"
+                data-aos-delay="300"
+              >
                 <h5 className="mt-1">Priority:</h5>
-                <div className={`priority align-items-center ${priority}`} >{priority}</div>
-              </span>
-            </div>
-            <div>
-              <span className="task-category  d-flex gap-2">
-                <h5 className="mt-1">Category:</h5>
-                <div className="type align-items-center">
-                  {category}
+                <div className={`priority align-items-center ${priority}`}>
+                  {priority}
                 </div>
               </span>
             </div>
-            <h6 className="mt-4">Description:</h6>
-            <h5 className="mb-4">{description}</h5>
+            <div>
+              <span
+                className="task-category  d-flex gap-2"
+                data-aos="fade-right"
+                data-aos-delay="400"
+              >
+                <h5 className="mt-1">Category:</h5>
+                <div className="type align-items-center">{category}</div>
+              </span>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="500">
+              <h6 className="mt-4">Description:</h6>
+              <h5 className="mb-4">{description}</h5>
+            </div>
             <div className="d-flex gap-3 justify-content-end">
-              <button className="edit-button" onClick={() => navigate("/")}>
+              <button
+                className="edit-button"
+                data-aos="fade-up"
+                data-aos-delay="600"
+                onClick={() => navigate("/")}
+              >
                 Done
               </button>
               <button
                 className="edit-button"
+                data-aos="fade-up"
+                data-aos-delay="750"
                 onClick={() => setIsEditing(true)}
               >
                 <i class="fa-solid fa-pen m-1"></i>Edit Task
               </button>
-              <button className="delete-button" onClick={handleDelete}>
+              <button
+                className="delete-button"
+                data-aos="fade-up"
+                data-aos-delay="900"
+                onClick={handleDelete}
+              >
                 <i class="fa-solid fa-trash m-1"></i>Delete Task
               </button>
             </div>
           </div>
         </div>
       ) : (
-        <div className="showtask-container">
+        <div
+          className="showtask-container"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <form className="showtask" onSubmit={handleSubmit}>
             <div className="task-header d-flex justify-content-between align-items-center mb-3">
               <input
                 type="text"
                 className="form-control"
+                data-aos="fade-right"
+                data-aos-delay="200"
                 defaultValue={title}
                 value={editedtask.title}
                 onChange={handleInputChange}
                 name="title"
                 style={{ width: "60%" }}
               />
-              <span className="task-status">
+              <span className="task-status" data-aos="fade-left" data-aos-delay="200">
                 {completed ? "Done" : "in progress"}
               </span>
             </div>
@@ -136,7 +177,7 @@ function Edittask() {
               className="d-flex justify-content-between align-items-center mb-3"
               style={{ width: "60%" }}
             >
-              <span className="task-date">
+              <span className="task-date" data-aos="fade-right" data-aos-delay="300">
                 <h5>Due Date:</h5>
                 <input
                   type="date"
@@ -147,7 +188,7 @@ function Edittask() {
                   defaultValue={date}
                 />
               </span>
-              <span className="task-priority d-flex gap-2 ms-2">
+              <span className="task-priority d-flex gap-2 ms-2" data-aos="fade-left" data-aos-delay="300">
                 <h5 className="mt-4">Priority:</h5>
                 <select
                   className="form-select mt-3"
@@ -162,7 +203,7 @@ function Edittask() {
               </span>
             </div>
             <div>
-              <span className="task-category d-flex gap-2">
+              <span className="task-category d-flex gap-2" data-aos="fade-right" data-aos-delay="400">
                 <h5 className="mt-2">Category:</h5>
                 <input
                   type="text"
@@ -180,6 +221,7 @@ function Edittask() {
                 </datalist>
               </span>
             </div>
+            <div data-aos="fade-left" data-aos-delay="500">
             <h6 className="mt-4">Description:</h6>
             <textarea
               className="form-control mb-4"
@@ -189,15 +231,18 @@ function Edittask() {
               onChange={handleInputChange}
               value={editedtask.description}
             ></textarea>
+            </div>
             <div className="d-flex gap-3 justify-content-end">
               <button
                 type="button"
                 className="edit-button"
+                data-aos="fade-up"
+                data-aos-delay="600"
                 onClick={() => setIsEditing(false)}
               >
                 <i class="fa-solid fa-pen m-1"></i>Cancel
               </button>
-              <button type="submit" className="edit-button">
+              <button type="submit" className="edit-button" data-aos="fade-up" data-aos-delay="750">
                 <i class="fa-solid fa-save m-1"></i>
                 Save Changes
               </button>
