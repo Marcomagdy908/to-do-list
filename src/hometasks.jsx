@@ -85,7 +85,7 @@ function Hometasks() {
   const completedTasks = todos.filter((todo) => todo.completed);
 
   const Task_container = ({ title, tasks }) => (
-    <div className="col-md-3 col-lg-3 col-sm-10 d-flex flex-column justify-content-center task-container">
+    <div className="col-md-3 col-lg-3 col-sm-10 task-container">
       <h2 className="mt-5">{title}</h2>
       {tasks.length > 0 ? (
         tasks.map((todo) => (

@@ -8,6 +8,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  flex: 1;
 }
 .card {
   border-radius: 15px;
@@ -131,8 +132,10 @@ body.dark .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child{
 .row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: start;
+  justify-self: center;
+  align-items: flex-start;
+  text-align: center;
+  width:80%;
 }
 .date {
   font-size: 14px;
@@ -167,4 +170,29 @@ body.dark .High{
   background-color: rgb(90, 35, 46);
   border: solid 0.2px #303541;
   color: white
+}
+@media screen and (max-width: 950px) {
+    .row{
+    width: 100%;
+  }
+  .task-container{
+    flex: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .row{
+    width: 100%;
+  }
+  .task-container{
+    flex: none;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+    .row{
+    width: 100%;
+  }
+  .task-container{
+    flex: none;
+  }
 }
